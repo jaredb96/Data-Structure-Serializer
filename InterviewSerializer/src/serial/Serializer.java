@@ -2,7 +2,7 @@ package serial;
 
 public class Serializer {
 	/**
-	 * LinkedList class
+	 * LinkedList class for serializing
 	 * @author jaredb96
 	 *
 	 */
@@ -10,13 +10,20 @@ public class Serializer {
 		int val;
 		ListNode next;
 		
-		
+		/**
+		 * Default ListNode constructor
+		 */
 		ListNode(){
-			val = -1;
+			val = 0;
 			next = null;
 		}
-		ListNode(int x){
-			val = x;
+		
+		/**
+		 * ListNode constructor which initializes head node
+		 * @param value to initialize
+		 */
+		ListNode(int value){
+			val = value;
 			next = null;
 		}
 		
@@ -25,6 +32,7 @@ public class Serializer {
 	}
 
 	public static void main(String[] args) {
+		// Simple test for serializing an element array
 		int[] test = {1, 2, 3, 4, 5};
 		ListNode testLinked = listToLinkedList(test);
 		ListNode iterator = testLinked;
@@ -38,6 +46,7 @@ public class Serializer {
 
 			iterator = iterator.next;
 		}
+		
 		
 
 	}
