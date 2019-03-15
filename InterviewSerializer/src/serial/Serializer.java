@@ -71,5 +71,31 @@ public class Serializer {
 		current.next = null;
 		return head;
 	}
-
+	
+	/**
+	 * This method serializes an input Linked List
+	 * and outputs it is as an int array
+	 * @param head of Linked List to be deserialized
+	 * @return int array representing serialized version of input
+	 */
+	public static int[] linkedListToList(ListNode head){
+		/* get size first pass */
+		int len = 0;
+		ListNode iterator = head;
+		while(iterator != null) {
+			len++;
+			iterator = iterator.next;
+		}
+		
+		/* second pass, add elements to return array */
+		int[] serialized = new int[len]; // return array
+		iterator = head;
+		for(int i=0; i<len; i++) {
+			serialized[i] = iterator.val;
+			iterator = iterator.next;
+		}
+		/* return serialized array */
+		return serialized;
+	}
+	
 }
