@@ -2,7 +2,7 @@ package serial;
 
 public class Serializer {
 	/**
-	 * LinkedList class for serializing
+	 * LinkedList class for serialization
 	 * @author jaredb96
 	 *
 	 */
@@ -28,6 +28,49 @@ public class Serializer {
 		}
 		
 		
+		
+	}
+	
+	/**
+	 * Binary tree class for serialization
+	 * @author jaredb96
+	 *
+	 */
+	public static class TreeNode{
+		int val;
+		TreeNode left;
+		TreeNode right;
+		
+		/**
+		 * Default constructor
+		 */
+		public TreeNode(){
+			val = 0;
+			left = null;
+			right = null;
+			
+		}
+		
+		/**
+		 * Constructor that initializes root node
+		 * @param root of tree
+		 */
+		public TreeNode(int root) {
+			val = root;
+
+		}
+		
+		/**
+		 * Constructor that initializes root node and its two child nodes
+		 * @param root of tree
+		 * @param leftChild of root node
+		 * @param rightChild of root node
+		 */
+		public TreeNode(int root, TreeNode leftChild, TreeNode rightChild) {
+			val = root;
+			left = leftChild;
+			right = rightChild;
+		}
 		
 	}
 
@@ -68,7 +111,7 @@ public class Serializer {
 			current.next = new ListNode();
 			current = current.next;
 		}
-		current.next = null;
+		current = null;
 		return head;
 	}
 	
@@ -97,5 +140,24 @@ public class Serializer {
 		/* return serialized array */
 		return serialized;
 	}
+	
+	/**
+	 * Method that returns a tree version of the given list
+	 * @param array that we are converting to a binary tree
+	 * @return tree form of input array
+	 */
+	public static TreeNode listToTree(int[] array) {
+		return null;
+	}
+	
+	/**
+	 * Method that returns a list version of the given tree
+	 * @param root of TreeNode that we are converting to a list
+	 * @return list form of input binary tree
+	 */
+	public static int[] treeToList(TreeNode root) {
+		return null;
+	}
+	
 	
 }

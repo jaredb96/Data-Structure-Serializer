@@ -49,6 +49,7 @@ class SerializerTest {
 		// repeat process of creating linked lists and testing them against serialized
 		// lists for subsequent examples (singleton list and empty list)
 
+		// test for singleton list
 		testNode = new ListNode();
 		testPoint = testNode;
 	    current = testNode;
@@ -65,6 +66,7 @@ class SerializerTest {
 		}
 		
 		
+		// test for empty list
 		testNode = new ListNode();
 		testPoint = testNode;
 	    current = testNode;
